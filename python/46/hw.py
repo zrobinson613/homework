@@ -21,7 +21,8 @@ print(example2.roll())
 
 class SixSidedDie(Die):
     def __init__(self):
-        self.sides = 6
+        # self.sides = 6
+        super().__init__(6)
 
 
 example3 = SixSidedDie()
@@ -47,3 +48,4 @@ def sel_sort(array):
     i = 0
     min = array[0]
     while i < len(array) - 1:
+        pass

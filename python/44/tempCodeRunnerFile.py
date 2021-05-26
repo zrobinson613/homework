@@ -1,4 +1,5 @@
-while num != guess:
+# while num != guess:
+#     pass
 #     try:
 #         guess = int(input('Guess a number between 1-100 '))
 #     except ValueError as e:
