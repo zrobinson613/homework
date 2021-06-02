@@ -1,0 +1,33 @@
+
+html{
+    background-color: lightgoldenrodyellow;
+}
+
+header {
+    text-align: center;
+    /*text-align: justify;*/
+}
+nav{
+    text-align: center;
+    /* border-top: 1px inset darkred ;
+    border-bottom:1px inset darkred ; */
+}
+
+nav img{
+    border: 1px inset darkred;
+    border-radius: 6px;
+}
+
+h1 {
+    font-style: italic;
+    color: darkred;
+    font-variant: small-caps;
+}
+
+p {
+    font-size: 1.5em;
+    color:crimson;
+    font-style: oblique;
+    font-weight: lighter;
+}
+
