@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin-left: 2em;
+            list-style: none;
+        }
+
+        .word {
+            list-style-image: url(images/wordicon.png);
+        }
+
+        a{
+            /* background-image: url(images/wordicon.png); */
+            background-repeat: no-repeat;
+            padding: 3em;
+            display: inline-block;
+        }
+
+        a[href*=".doc"]{
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>Attribute Selectors</h1>
+    <ul>
+        <li><a href = myDoc1.doc>myDoc1.doc</a></li>
+        <li ><a href = myDoc1.doc>myOther.docx</a></li>
+        <li ><a href = myDoc1.doc>myDoc1.doc</a>myPresentation.pdf</li>
+    </ul>
+</body>
+
+</html>

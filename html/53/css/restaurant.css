@@ -17,6 +17,12 @@ body{
     min-width: 1000px;
 }
 
+@media screen and (max-width){
+    body{
+        padding: 5px;
+    }
+}
+
 header {
     text-align: center;
     /*text-align: justify;*/

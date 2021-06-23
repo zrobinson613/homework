@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="icon" href="fishpic.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            text-align: center;
+            margin: auto;
+        }
+
+        input,
+        textarea,
+        select {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black;
+
+            margin-block: 1em;
+
+        }
+
+        label {
+            display: block;
+            /* padding: 0.5em; */
+        }
+
+        input[type=range] {
+            width: 15em;
+        }
+
+        input:invalid:not(:placeholder-shown) {
+            border: 1px red dashed;
+
+
+        }
+
+        table {
+            margin: auto;
+            width: 50%;
+            border-collapse: collapse;
+            /* border:black 1px solid; */
+
+        }
+
+        td,
+        th {
+            padding: 0.5em;
+            border: black 1px solid;
+
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: chocolate;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: darkorchid;
+        }
+
+        th {
+            color: red;
+        }
+
+        tfoot{
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <p>
+            Restaurant la Fictionalle
+        </p>
+        <a href="index.html"><img src="imgRestName.png" alt="Restaurant Name"></a>
+        <!-- <video src="videos/Restaurant.mp4" controls></video> -->
+    </header>
+    <nav> <a href="Our_Menu.html">
+            <!-- <h1>Our Menu</h1> -->
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEH3SEu-QsiwsMRQkfGiFwbqzwABQSrLPCeQ&usqp=CAU"
+                alt="menu" width=100>
+        </a>
+        <p>
+            <!-- <a href="Feedback.html">We Welcome Your Feedback!</a> -->
+        </p>
+    </nav>
+    <!-- <h1>Restaurant la Fictionalle</h1> -->
+
+
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ6z5SUkb56uMG7mZ8WuGILKeDlJSCTUqBgg&usqp=CAU"
+            alt="Restaurant Pic"> -->
+
+
+    <h1>
+        Your Feedback Counts
+    </h1>
+
+    <form action="formss.php" method="POST">
+        <label for="FirstName">First Name:</label>
+        <input id="FirstName" name="FirstName" placeholder="First" required minlength="0">
+
+        <label for="LastName">Last Name:</label>
+        <input id="LastName" name="LastName" placeholder="Last" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="email@address" required>
+
+        <label for="Date">Date Visited</label>
+        <input type="date" name="Date" id="date" min="1900-01-01" max="2085-12-31">
+
+        <label for="rating">Rating</label>
+        <input type="range" name="rating" id="rating" min="1" max="5">
+
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments" cols="50" rows="5" placeholder="Enter comment here"></textarea>
+
+        <label for="recommend">Would you recommend to a friend?</label>
+        <select name="recommend" id="recommend">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+        </select>
+
+        <input type="reset">
+        <input type="submit">
+
+    </form>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Extremely Poor</th>
+                <th>Poor</th>
+                <th>Average</th>
+                <th>Great</th>
+                <th>Excellent</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>135</td>
+                <td>854</td>
+                <td>465</td>
+                <td>321</td>
+                <td>986</td>
+            </tr>
+            <tr>
+                <td>135</td>
+                <td>854</td>
+                <td>465</td>
+                <td>321</td>
+                <td>986</td>
+            </tr>
+            <tr>
+                <td>135</td>
+                <td>854</td>
+                <td>465</td>
+                <td>321</td>
+                <td>986</td>
+            </tr>
+            <tr>
+                <td>135</td>
+                <td>854</td>
+                <td>465</td>
+                <td>321</td>
+                <td>986</td>
+            </tr>
+            <tr>
+                <td>135</td>
+                <td>854</td>
+                <td>465</td>
+                <td>321</td>
+                <td>986</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>19651</td>
+                <td>25841</td>
+                <td>78952</td>
+                <td>65123</td>
+                <td>98789</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+
+
+
+</body>
+
+</html>

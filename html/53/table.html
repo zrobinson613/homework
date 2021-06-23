@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            /* border-top: 1px solid black; 
+            border-bottom: 1px solid black; */
+            padding: .5em 1em;
+        }
+
+        td {
+            text-align: right;
+        }
+
+        tfoot td {
+            color: red;
+        }
+
+        caption {
+            font-weight: bold;
+            font-style: italic;
+            caption-side: bottom;
+        }
+
+        /* .even{
+            background-color: lightgrey;
+        } */
+        /* 2*0,2*1,2*2,2*3 etc... */
+
+        tbody tr:nth-child(2n) {
+            /* tbody tr:nth-child(odd) */
+            /* tbody tr:nth-child(3)  */ /*third guy*/
+            background-color: lightskyblue /* !important changes importance like order*/;
+        }
+
+        tbody tr:hover{
+            background-color: lime;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>PCS Studennnnntttssss</caption>
+        <thead>
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursay</th>
+                <th>Sunday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>One</td>
+                <td>Two</td>
+                <td>Three</td>
+                <td>Four</td>
+                <td>Five</td>
+                <td>Six</td>
+                <td>Seven</td>
+            </tr>
+            <tr>
+                <td>One</td>
+                <td>Two</td>
+                <td>Three</td>
+                <td>Four</td>
+                <td>Five</td>
+                <td>Six</td>
+                <td>Seven</td>
+            </tr>
+            <tr>
+                <td>One</td>
+                <td>Two</td>
+                <td>Three</td>
+                <td>Four</td>
+                <td>Five</td>
+                <td>Six</td>
+                <td>Seven</td>
+            </tr>
+            <tr>
+                <td>One</td>
+                <td>Two</td>
+                <td>Three</td>
+                <td>Four</td>
+                <td>Five</td>
+                <td>Six</td>
+                <td>Seven</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>13555</td>
+                <td>13555</td>
+                <td>13555</td>
+                <td>13555</td>
+                <td>13555</td>
+                <td>13555</td>
+                <td>13555</td>
+
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
