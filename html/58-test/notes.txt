@@ -1,0 +1,5 @@
+make links in nav jump to place, also fixed
+
+footer
+
+video options under header

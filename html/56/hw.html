@@ -9,31 +9,62 @@
     <style>
         body {
             display: grid;
-            grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+            grid: 250px 50px 50px 250px / 250px 50px 50px 250px;
         }
 
         #one {
-            width: 10em;
-            height: 20em;
+
             background-color: cornflowerblue;
+            grid-column: 2 / 4;
         }
 
         #two {
-            width: 10em;
-            height: 20em;
+
             background-color: crimson;
+            grid-column: 4 / 5;
+            grid-row: 2/4;
         }
 
         #three {
-            width: 10em;
-            height: 20em;
+
             background-color: darksalmon;
+            grid-column: 2 / 4;
+            grid-row: 4 / 5;
         }
 
         #four {
-            width: 10em;
-            height: 20em;
+
             background-color: navajowhite;
+            grid-column: 1/2;
+            grid-row: 2/4;
+        }
+
+        #five {
+
+            background-color: cornflowerblue;
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        #six {
+
+            background-color: crimson;
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+
+        #seven {
+
+            background-color: darksalmon;
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+
+        #eight {
+
+            background-color: navajowhite;
+            grid-column: 2/3;
+            grid-row: 3/4;
         }
     </style>
 </head>
@@ -43,6 +74,10 @@
     <div id="two"></div>
     <div id="three"></div>
     <div id="four"></div>
+    <div id="five"></div>
+    <div id="six"></div>
+    <div id="seven"></div>
+    <div id="eight"></div>
 </body>
 
 </html>
