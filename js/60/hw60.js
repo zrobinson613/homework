@@ -2,8 +2,8 @@
 var name = "Zac";
 var email = "zrobinson613";
 
-var age = prompt("what's your age?")
+var age = prompt("what's your age?");
 
-console.log("I am " + age + " years old.")
+console.log("I am " + age + " years old.");
 
 // confirm("hey!");
