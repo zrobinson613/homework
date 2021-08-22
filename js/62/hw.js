@@ -1,7 +1,7 @@
 'use strict';
 
 let dayOfWeekModule = (function () {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday'];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursady', 'Friday', 'Saturday'];
 
     return {
         getDayName: function (a) {
