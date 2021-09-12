@@ -8,6 +8,8 @@
             newArray.push(theFunction(theArray[i]));
         }
 
+        theArray.forEach(v => newArray.push(theFunction(v)));
+
         return newArray;
     }
 
