@@ -24,3 +24,6 @@
     console.log('Last counter - myNewCounter2.getCounter()', myNewCounter2.getCounter());
 
 }());
+
+// SL - nice
+// SL - grade - 100

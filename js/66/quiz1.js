@@ -1,6 +1,7 @@
 (function () {
     'use strict';
 
+    // SL - I would use more descriptive param names then "theFunction"
     function myMap(theArray, theFunction) {
         let newArray = [];
 
@@ -13,6 +14,7 @@
 
     const numbers = [2, 4, 6];
 
+    // SL - and again here "myFunction" tells me nothing useful.
     function myFunction(num) {
         return num * 2;
     }
@@ -23,3 +25,5 @@
     console.log('original Array', numbers);
 
 }());
+
+// SL - nice

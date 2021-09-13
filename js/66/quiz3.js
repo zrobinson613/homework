@@ -21,3 +21,5 @@ window.app.createCounter = (function (insides) {
 
 })(window.app.createCounter || {});
 
+// SL - nice
+

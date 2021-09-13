@@ -1,7 +1,7 @@
 window.app = window.app || {};
 
 
-window.app.counter = (function (insides) { 
+window.app.counter = (function (insides) {
     'use strict';
 
     let theCounter = 0;
@@ -17,5 +17,7 @@ window.app.counter = (function (insides) {
     return insides;
 
 })(window.app.counter || {});
+
+// SL - nice - app.counter stuff a little more complex then needed for this example...
 
 
