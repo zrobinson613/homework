@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Soup",
+        "pic": "https://www.cookingclassy.com/wp-content/uploads/2014/10/vegetable-soup-7-768x1152.jpg",
+        "ingredients": ["onions", "carrots", "celery", "water", "spices"]
+    },
+    {
+        "name": "Fish",
+        "pic": "https://www.healthdigest.com/img/gallery/heart-healthy-fish-thats-perfect-for-a-light-dinner/intro-1613665442.jpg",
+        "ingredients": ["salmon", "lemon", "spices"]
+    },
+    {
+        "name": "Cholent",
+        "pic": "https://jamiegeller.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_860/MTY1NTI0OTQxMzA4NDM4MDU0/bigstock-traditional-jewish-cholent-ha-125883281jpg.webp",
+        "ingredients": ["meat", "barley", "potatoes", "beans", "onions"]
+    },
+    {
+        "name": "Fruit Salad",
+        "pic": "https://www.thespruceeats.com/thmb/YZD_JMsuMjled0PYAyr_Juswv-8=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fresh-fruit-salad-3056969-hero1-43f9da5fec944be888e9ff84b7d10051.jpg",
+        "ingredients": ["grapes", "apples", "oranges", "watermelon", "pear", "blueberries"]
+    }
+]
+
+
