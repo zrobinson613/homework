@@ -18,49 +18,49 @@
 
             videos.forEach(v => {
                 videoSelect.append(`<option value="${v.title}">${v.title}</option>`);
-    
-});
+
+            });
             videoSelect.change(function () {
 
-                let optionSelected = $(this).find("option:selected"); 
-                
+                let optionSelected = $(this).find("option:selected");
+
                 // if(resultVideo.val()){
                 //     resultVideo.empty();
                 // }
-                
+
                 // resultVideo.empty();
-                
+
                 // console.log(optionSelected.text());
 
-                videos.forEach(v=>{
+                videos.forEach(v => {
 
-                    if(optionSelected.text() === v.title){
+                    if (optionSelected.text() === v.title) {
                         resultTitle.text(v.title);
 
                         // resultVideo.empty();
 
-                        if(v.image){
-                            resultImage.attr({"src" : v.image});
+                        if (v.image) {
+                            resultImage.attr({ "src": v.image });
                         } else {
                             resultImage.attr("src", "images/default.jpg");
                         }
 
-                        resultElem.click( () =>{
+                        resultElem.click(() => {
                             resultImage.hide();
 
-                            resultVideo.attr({"src": v.url,  "controls": true});
+                            resultVideo.attr({ "src": v.url, "controls": true });
                             resultVideo[0].play();
                         });
                     }
 
-                    
+
                 });
 
-                
+
 
 
             });
-        
+
 
 
         }).catch(err => console.error("We have an error", err));
