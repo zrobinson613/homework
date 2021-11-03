@@ -75,5 +75,95 @@
 
     });
 
+    const drawingManager = new google.maps.drawing.DrawingManager({
+        drawingMode: google.maps.drawing.OverlayType.MARKER,
+        drawingControl: true,
+        drawingControlOptions: {
+            position: google.maps.ControlPosition.TOP_CENTER,
+            drawingModes: [
+                google.maps.drawing.OverlayType.MARKER,
+                google.maps.drawing.OverlayType.CIRCLE,
+                google.maps.drawing.OverlayType.POLYGON,
+                google.maps.drawing.OverlayType.POLYLINE,
+                google.maps.drawing.OverlayType.RECTANGLE,
+            ],
+        },
+        markerOptions: {
+            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        },
+        circleOptions: {
+            fillColor: "#ffff00",
+            fillOpacity: 0.25,
+            strokeWeight: 5,
+            clickable: false,
+            editable: true,
+            zIndex: 1,
+        },
+    });
+
+    drawingManager.setMap(map);
+
+
+
+    let drawings = [];
+
+    google.maps.event.addListener(drawingManager, 'markercomplete', marker => {
+        console.log(marker.position);
+
+        drawings.push({ position: marker.position, type: "marker" });
+        localStorage.setItem('mydrawings', JSON.stringify(drawings));
+    });
+
+
+
+    google.maps.event.addListener(drawingManager, 'circlecomplete', e => {
+
+
+        drawings.push({ center: e.getCenter(), radius: e.getRadius(), type: "circle" });
+        localStorage.setItem('mydrawings', JSON.stringify(drawings));
+
+
+    });
+
+
+
+
+
+    let drawingsString = localStorage.getItem('mydrawings');
+    let drawingsNew = JSON.parse(drawingsString);
+
+    if (drawingsNew) {
+
+        drawingsNew.forEach(d => {
+
+            if (d.type === "circle") {
+                new google.maps.Circle({
+                    center: d.center,
+                    radius: d.radius,
+                    map: map,
+
+                });
+            } else if (d.type === "marker") {
+                new google.maps.Marker({
+                    position: d.position,
+                    map: map,
+
+                });
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })();
