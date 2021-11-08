@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #body {
+            margin-top: 6em;
+        }
+
+        #appear {
+            text-align: start;
+            top: 25px;
+            left: 25px;
+        }
+
+        #practice img {
+            padding: 1em;
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mr Potato Head</h1>
+
+    <!--div id="practice">
+        <img class="image" src="media/images/ears.png" alt="">
+        <img class="image" src="media/images/eyes.png" alt="">
+        <img class="image" src="media/images/nose.png" alt="">
+    </div-->
+
+    <div id="appear">
+        
+    </div>
+
+    <div id="navBar">
+        <form action="">
+            <label for="pieces">Add a piece:</label>
+            <select name="pieces" id="piecesSelector">
+                <option hidden>choose a piece</option>
+                <option value="eyes">Eyes</option>
+                <option value="ears">Ears</option>
+                <option value="nose">Nose</option>
+                <option value="roundNose">Round Nose</option>
+
+            </select>
+            <button type="submit">Add!</button>
+        </form>
+    </div>
+
+    <div id="body">
+        <img src="media/images/head.png" alt="">
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="mrPotato.js"></script>
+</body>
+
+</html>
