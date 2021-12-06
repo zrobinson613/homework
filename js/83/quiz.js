@@ -46,8 +46,11 @@
                     }
                     return response.json();
                 })
+                // SL - kishkes - cute - but not really descriptive...
                 .then(kishkes => {
                     kishkes.forEach(k => {
+                        // SL - seems the complexity of checking for "valid" data is probably overkill here
+                        // defensive programing is great but I might rely on data matching agreed upon API unless this was some sort of critical system. I would code for cases that agreed upon API allows for (e.g no items, no orders, price or quantity of 0 - though quantity of 0 is probably bad data, and behave properly in those cases but not sure I would handle receiving complete garbage...
 
                         let properties = ['customer', 'address', 'items'];
                         if ((properties.every(p => k.hasOwnProperty(p) && k[p] !== null))) {
@@ -82,6 +85,7 @@
 
     fetchObjectFromFile('json.json');
 
+    // SL - upload?
     function uploadToHTML() {
         console.log(orderArray);
         orderArray.forEach(order => {
@@ -103,7 +107,7 @@
         });
     }
 
-    /*function UrlExists(url) {       
+    /*function UrlExists(url) {
         var http = new XMLHttpRequest();
         http.open('HEAD', url, false);
         http.send();
@@ -111,3 +115,5 @@
     }*/
 
 })();
+
+// SL - nice - 100
