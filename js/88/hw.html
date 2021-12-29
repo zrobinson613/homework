@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const root = document.getElementById("root");
+
+        const myName = "My name"
+
+        /*ReactDOM.render(
+            <h2>this is my h2 {myName}</h2>,
+            document.getElementById("root")
+        );*/
+
+        let prac1 = <h1>My first h1, note no "" and {myName}</h1>;
+        // ReactDOM.render(prac1,root);
+
+        function pracFunction(xyz){
+            if(xyz){
+                return <h3>you passed in a param</h3>;
+            }
+            else {
+                return <h3>you passed in nothing</h3>
+            }
+            
+        }
+
+        /*ReactDOM.render(
+            pracFunction(1),
+            root
+        );*/
+
+        
+
+
+
+
+
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
