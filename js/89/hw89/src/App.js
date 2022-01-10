@@ -11,7 +11,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${this.state.zipcodes[0]}&appid=cb7c71219cf09eb0bb414b932669be97&units=imperial&lang=`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${this.state.zipcodes[0]}&appid=xcb7c71219cf09eb0bb414b932669be97&units=imperial&lang=`)
       .then(r => {
         if (!r.ok) {
           throw new Error(`${r.status} ${r.statusText}`);
