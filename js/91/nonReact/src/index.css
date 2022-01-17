@@ -1,0 +1,72 @@
+html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* box-sizing: border-box; */
+    
+}
+body{
+    height: 100%;
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.headerDiv{
+    box-sizing: border-box;
+    height: 85px;
+}
+
+.headerDiv h1{
+margin: 0;
+padding: 0.5em;
+box-sizing: border-box;
+}
+
+#usersDiv{
+    width: 35%;
+    padding: 0;
+    height:calc(100% - 85px);
+    margin: 0;
+    float: left;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.user:nth-child(2n-1){
+    background-color: lightgrey;
+    
+}
+.user{
+    padding: 0.5em;    
+}
+
+.user:hover{
+    background-color: grey;
+    
+}
+#usersDiv h3 {
+    margin: 0;
+}
+
+#postsDiv{
+    float: left;
+    width: 65%;
+    box-sizing: border-box;
+    height:calc(100% - 85px);
+    overflow: scroll;
+}
+
+.post{
+    padding: 0 1em;
+    border-bottom: black 1px solid;
+}
+
+.post button{
+    margin-bottom: 1em;
+}
