@@ -36,6 +36,7 @@ box-sizing: border-box;
     box-sizing: border-box;
     overflow-y: scroll;
     position: relative;
+    /* display: none; */
 }
 
 .user:nth-child(2n-1){
@@ -69,4 +70,8 @@ box-sizing: border-box;
 
 .post button{
     margin-bottom: 1em;
+}
+
+.displayNone {
+    display: none;
 }
