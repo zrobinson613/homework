@@ -8,29 +8,32 @@ import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
 import Header from './Header';
 import { useState, useEffect } from 'react';
 
-export default function App () {
-  const [state, setState] = useState({});
+export default function App() {
+  const [recipes, setState] = useState();
 
   useEffect(() => {
     (
-      async () =>{
+      async () => {
         let response = await fetch("recipes.json");
         let recipes = response.json();
         console.log(recipes);
+        setState(recipes);
       }
     )();
 
-  },[]);
+  });
 
-
+  if (!recipes) {
+    return (<div>Loading.....</div>);
+  }
   return (
     <div className='container-fluid'>
       <div className='text-center'>
         <Header />
         <Routes>
-          <Route index element={<RecipeList recipes={state.recipes} />} />
+          <Route index element={<RecipeList recipes={recipes} />} />
 
-          <Route path='/recipe/:id' element={<RecipeDetails recipes={state.recipes} />} />
+          <Route path='/recipe/:id' element={<RecipeDetails recipes={recipes} />} />
 
           {/*<Route path='*' element={<h5 style={{ color: 'red' }}>This is not the page you are looking for - 404</h5>} />*/}
 
