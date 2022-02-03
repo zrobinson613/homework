@@ -7,9 +7,7 @@ import { Address } from '../shared/address';
   styleUrls: ['./address.component.css']
 })
 export class AddressComponent implements OnInit {
-  @Input() theadress: Address = {
-    street: "102 main", zip: 25658
-  };
+  @Input() address!: Address;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<br>
+
+<label> Choose a category </label>
+<select #catSelect (change) = "onSelect(catSelect.value)">
+  <option *ngFor="let category of categories; let i = index;" [value]="i">
+    {{category.name}}
+  </option>
+</select>
+
+<div >
+  <app-category [theCategory]="selectedCategory"></app-category>
+</div>
+

@@ -10,9 +10,7 @@ import { AddressComponent } from '../address/address.component';
   styleUrls: ['./person.component.css']
 })
 export class PersonComponent implements OnInit {
-  address: Address = {
-    street: "102 main", zip: 25658
-  }
+  address!: Address;
 
   @Input() person: Person = {
     firstName: "moshe",
