@@ -8,6 +8,7 @@ import { Category } from './shared/Category';
 })
 export class AppComponent {
   title = 'HW 97 Categories Practice';
+  
   selectedCategory: Category = {name:"",items:[]};
 
   onSelect (val: any){
