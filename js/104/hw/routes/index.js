@@ -29,7 +29,20 @@ router.get('/contacts', function (req, res, next) {
 });
 
 router.get('/api/contacts', function (req, res, next) {
-  res.send(contacts);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  connection.query('SELECT * FROM contacts', (error, results, fields) => {
+    if (error) throw error;
+
+    // debug(`get returning ${JSON.stringify(results)}`);
+    console.log(results);
+    res.send(results);
+    /*res.render('index', {
+      title: 'Contacts',
+      contacts: results
+    });*/
+  });
+
+  // res.send(contacts);
   /* res.render('index', { 
      title: 'Contacts',
      contacts: contacts

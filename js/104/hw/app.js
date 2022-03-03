@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
+
 var app = express();
 
 // view engine setup
@@ -37,5 +39,24 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'nodeUser',
+  password : 'test123',
+  database : 'nodeUser'
+});
+ 
+connection.connect();
+ 
+connection.query('SELECT * FROM contacts', function (error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+});
+ 
+// connection.end();
+global.connection = connection;
+
 
 module.exports = app;
